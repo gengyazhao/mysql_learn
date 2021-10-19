@@ -1,0 +1,12 @@
+select * from table_name where a=value
+
+select a,b from table_name where a=value
+
+select * from table_name
+
+select a,b from table_name
+#降序
+select * from table_name order by a desc
+
+#升序
+select * from table_name order by a asc
