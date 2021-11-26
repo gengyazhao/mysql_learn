@@ -1,0 +1,36 @@
+drop 命令删除数据库
+drop database <数据库名>;
+mysql> drop database q5cell;
+
+
+使用 mysql mysqladmin 命令在终端来执行删除命令
+mysqladmin -u root -p drop RUNOOB
+
+创建数据库
+CREATE DATABASE 数据库名;
+create database license;
+
+选择数据库
+use license;
+
+MySQL 支持多种类型，大致可以分为三类：数值、日期/时间和字符串(字符)类型
+创建数据表
+create table if not exists lic(
+id int not null auto_increment,
+ip varchar(100) not null,
+type varchar(10) not null,
+version varchar(10) not null,
+esn varchar(100) not null,
+plmn int not null,
+pwd varchar(50) not null,
+lic_data date,primary key(id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+如果你不想字段为 NULL 可以设置字段的属性为 NOT NULL， 在操作数据库时如果输入该字段的数据为NULL ，就会报错。
+AUTO_INCREMENT定义列为自增的属性，一般用于主键，数值会自动加1。
+PRIMARY KEY关键字用于定义列为主键。 您可以使用多列来定义主键，列间以逗号分隔。
+ENGINE 设置存储引擎，CHARSET 设置编码。
+
+
+插入数据
+insert into lic (id,ip,type,version,esn,plmn,pwd,lic_data) values (1,'20.20.35.1','NR','R005','2102311VBKN0L7018361',46060,'hwbs@com','2021-11-26');
