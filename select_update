@@ -10,3 +10,6 @@ select * from table_name order by a desc
 
 #升序
 select * from table_name order by a asc
+
+#更新
+update table_name set a = '3' where a = '4' and b = '5';
