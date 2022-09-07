@@ -1,17 +1,30 @@
-drop 命令删除数据库
-drop database <数据库名>;
-mysql> drop database q5cell;
-
-
 使用 mysql mysqladmin 命令在终端来执行删除命令
 mysqladmin -u root -p drop RUNOOB
 
 创建数据库
 CREATE DATABASE 数据库名;
-create database license;
+create database datebase_name;
+
+删除数据库
+drop database <数据库名>;
+mysql> drop database datebase_name;
+
+查看数据库
+show databases;
 
 选择数据库
-use license;
+use datebase_name;
+
+创建数据表
+create table table_name (column_name column_type, column_name column_type) default charset=utf8;
+
+查看数据表
+show tables;
+
+删除数据表
+drop table table_name;
+
+
 
 MySQL 支持多种类型，大致可以分为三类：数值、日期/时间和字符串(字符)类型
 创建数据表
