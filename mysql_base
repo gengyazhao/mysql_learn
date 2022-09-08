@@ -46,4 +46,4 @@ ENGINE 设置存储引擎，CHARSET 设置编码。
 
 
 插入数据
-insert into lic (id,ip,type,version,esn,plmn,pwd,lic_data) values (1,'20.20.35.1','NR','R005','2102311VBKN0L7018361',46060,'hwbs@com','2021-11-26');
+insert into lic (id,ip,type,version,esn,plmn,pwd,lic_data) values (1,'20.20.35.x','NR','R005','xxxjsjdfjkskdf',46060,'xxxxxx','2021-11-26');
