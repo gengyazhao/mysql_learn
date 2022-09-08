@@ -1,0 +1,33 @@
+增
+insert into table_name (column_name1, column_name2, ...column_nameN) values (value1, value2, ...valueN);
+
+删
+
+改
+#更新
+update table_name set a = '3' where a = '4' and b = '5';
+
+查
+select column_nameN from table_name where column_name = value;
+limit设定返回的记录数
+offset设定select语句开始查询的数据偏移量，默认偏移量为0
+
+select * from table_name where a=value;
+
+select a,b from table_name where a=value;
+
+select * from table_name;
+
+select a,b from table_name;
+#降序
+select * from table_name order by a desc;
+
+#升序
+select * from table_name order by a asc;
+
+select column_name1, column_name2, column_nameN from table_name1, table_name2, ... where condition1 [and | or] condition2 ...
+查询语句中可以使用一个或者多个表，表之间使用逗号分割，并使用WHERE语句来设定查询条件。
+WHERE 子句也可以运用于 SQL 的 DELETE 或者 UPDATE 命令
+
+
+
