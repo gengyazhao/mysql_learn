@@ -27,7 +27,7 @@ select * from table_name order by a asc;
 
 select column_name1, column_name2, column_nameN from table_name1, table_name2, ... where condition1 [and | or] condition2 ...
 查询语句中可以使用一个或者多个表，表之间使用逗号分割，并使用WHERE语句来设定查询条件。
-WHERE 子句也可以运用于 SQL 的 DELETE 或者 UPDATE 命令
-
-
-
+where子句也可以运用于 SQL 的 delete 或者 update 命令
+MySQL中where子句的字符串比较是不区分大小写的。 可以使用binary关键字来设定where子句的字符串比较是区分大小写的.
+select * from table_name where binary column_name = "com";
+select * from table_name where binary column_name = "COM";
