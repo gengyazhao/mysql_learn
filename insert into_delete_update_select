@@ -14,6 +14,8 @@ update table_name set a = '3' where a = '4' and b = '5';
 select column_nameN from table_name where column_name = value;
 limit设定返回的记录数
 offset设定select语句开始查询的数据偏移量，默认偏移量为0
+regexp匹配正则表达式
+SELECT * FROM table_name where name regexp "5060";
 
 select * from table_name where a=value;
 
