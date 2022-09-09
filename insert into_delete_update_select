@@ -1,13 +1,16 @@
-增
+增insert into
 insert into table_name (column_name1, column_name2, ...column_nameN) values (value1, value2, ...valueN);
 
-删
+删delete
+delete from table_name [where condition]
+如果没有指定 WHERE 子句，MySQL 表中的所有记录将被删除。
+delete from students where age<20;
 
 改
-#更新
+#更新update
 update table_name set a = '3' where a = '4' and b = '5';
 
-查
+查select
 select column_nameN from table_name where column_name = value;
 limit设定返回的记录数
 offset设定select语句开始查询的数据偏移量，默认偏移量为0
@@ -31,3 +34,19 @@ where子句也可以运用于 SQL 的 delete 或者 update 命令
 MySQL中where子句的字符串比较是不区分大小写的。 可以使用binary关键字来设定where子句的字符串比较是区分大小写的.
 select * from table_name where binary column_name = "com";
 select * from table_name where binary column_name = "COM";
+
+
+where：数据库中常用的是where关键字，用于在初始表中筛选查询。它是一个约束声明，用于约束数据，在返回结果集之前起作用。
+group by:对select查询出来的结果集按照某个字段或者表达式进行分组，获得一组组的集合，然后从每组中取出一个指定字段或者表达式的值。
+having：用于对where和group by查询出来的分组经行过滤，查出满足条件的分组结果。它是一个过滤声明，是在查询返回结果集以后对查询结果进行的过滤操作。
+执行顺序
+FROM, including JOINs
+WHERE
+GROUP BY
+HAVING
+WINDOW functions
+SELECT
+DISTINCT
+UNION
+ORDER BY
+LIMIT and OFFSET
