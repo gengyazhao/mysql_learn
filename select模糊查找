@@ -1,0 +1,14 @@
+查select
+select column_nameN from table_name where column_name = value;
+limit设定返回的记录数
+offset设定select语句开始查询的数据偏移量，默认偏移量为0
+
+regexp匹配正则表达式
+like或not like
+in
+
+select * from table_name where name regexp "5060";
+匹配name中带字符串“5060”的行
+
+. 匹配除换行符\n
+
