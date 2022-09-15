@@ -57,3 +57,23 @@ $   匹配字符串结束位置
 
 
 
+like
+
+百分号（%）：表示任意个或多个字符。可匹配任意类型和长度的字符。
+select column_name from table_name where column_name like "%tom%";
+
+下划线（_）：表示任意单个字符。匹配单个任意字符，它常用来限制表达式的字符长度语句：（可以代表一个中文字符）
+select * from table_name where column_name like "中秋_";
+
+
+
+in
+in与=类似，区别在于：=后面是一个值，in后面可以是多个值。in语句不支持模糊查询
+select * from table_name where column_name in ("tom");
+select * from table_name where column_name = "tom";
+上面两个语句等效
+
+select * from table_name where column_name in ("tom","bob");
+匹配多个值
+
+like contact 模糊查询
