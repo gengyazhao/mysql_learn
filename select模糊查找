@@ -77,3 +77,5 @@ select * from table_name where column_name in ("tom","bob");
 匹配多个值
 
 like contact 模糊查询
+contact(str1,str2,…) 函数返回结果为连接参数产生的字符串。
+select * from table_name where colnmu_name like contact("%","tom","%")
