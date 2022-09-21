@@ -1,0 +1,36 @@
+show columns from alter_tbl;
+
+删除，添加或修改表字段
+alter table alter_tbl  drop x;
+如果数据表中只剩余一个字段则无法使用drop来删除字段。
+如果需要指定新增字段的位置，可以使用关键字 first (设定位第一列)， after column_name（设定位于某个字段之后）。
+alter table alter_tbl add x int first;
+alter table alter_tbl add x int after y;
+first 和 after 关键字可用于 add 与 modify 子句，如果需要重置数据表字段的位置就需要先使用 drop 删除字段然后再使用 add 来添加字段并设置位置。
+
+
+
+
+
+修改字段类型以及名称：change关键字后，紧跟着是要修改的字段名，新字段名，新字段类型。
+alter table alter_tbl change x char(10);
+alter table alter_tbl change x y bigint;
+alter table alter_tbl change x x int;
+
+
+设置默认值或是否为空,若不设置默认值则默认为null
+alter table alter_tbl modify x bigint not null default 100;
+
+alter table alter_tbl alter x set default 1000;
+alter table alter_tbl alter x drop default;
+
+
+修改数据表类型
+alter table alter_tbl engine = myisam;
+
+修改表名
+alter table alter_tbl rename to tbl_alter;
+
+alter 还可以创建和删除数据表的索引。
+alter 删除外键约束
+alter table alter_tbl drop foreign key foreign_key_name;
