@@ -1,0 +1,10 @@
+mysql -u root -p
+Enter password: ****
+use mysql
+select host,user from user;
+update user set host='%' where user = 'root';
+select host,user from user;
+\q
+
+C:\WINDOWS\system32>net stop mysql
+C:\WINDOWS\system32>net start mysql
