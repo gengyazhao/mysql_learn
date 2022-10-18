@@ -9,6 +9,7 @@ delete from students where age<20;
 改
 #更新update
 update table_name set a = '3' where a = '4' and b = '5';
+update tbl_cell set bts_id = (select id from tbl_bts where btsid = 9045) where cellname regexp "9045";
 
 查select
 select column_nameN from table_name where column_name = value;
