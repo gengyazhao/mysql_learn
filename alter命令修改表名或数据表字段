@@ -1,5 +1,9 @@
 show columns from alter_tbl;
 
+ALTER TABLE tbl_cell
+ADD FOREIGN KEY (`bts_id`)
+REFERENCES lic(`id`);
+
 删除，添加或修改表字段
 alter table alter_tbl  drop x;
 如果数据表中只剩余一个字段则无法使用drop来删除字段。
