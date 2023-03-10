@@ -1,0 +1,21 @@
+user_tbl
+
+userid  username pwd sex  phone
+100000  zhangsan  123 男   15678325657
+100001  lisi      456 女   17787535658
+
+score_tbl
+
+scoreid userid  username  score course phone
+1000    100000            80    英语
+1001    100000            85    数学
+
+要求：根据userid把user_tbl表中的username和phone字段更新到score_tbl表中。
+
+update score_tbl,user_tbl
+set score_tbl.username = user_tbl.username,score_tbl.phone = user_tbl.phone
+where score_tbl.userid = user_tbl.userid;
+
+或者使用join
+update score_tbl join user_tbl on score_tbl.userid = user_tbl.userid
+set score_tbl.username = user_tbl.username, score_tbl.phone = user_tbl.phone;
