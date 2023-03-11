@@ -23,4 +23,26 @@ mysqldump -uroot -pxxxx --all-databases >bkp.sql
 mysqldump -uroot -p --all-databases >bkp.sql
 Enter password: ****
 
+--tab指定导出文件的目录，
+mysqldump -uroot -p --tab=d:/bkp/ db_name tbl_name
+Enter password: ****
+mysqldump: Got error: 1290: The MySQL server is running with the --secure-file-priv option so it cannot execute this statement when executing 'SELECT INTO OUTFILE'
+当secure-file-priv的值为NULL，表示不允许导入导出
+当secure-file-priv的值为/tmp/，表示导入导出只允许发生在/tmp/目录下
+当secure-file-priv的值没有具体值时，表示不对导入导出做限制
+
+查看数据库当前该参数的值
+mysql -uroot -p
+Enter password: ****
+mysql> show global variables like '%secure%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| require_secure_transport | OFF   |
+| secure_file_priv         | NULL  |
++--------------------------+-------+
+
+linux中修改mysql.cnf文件，对secure_file_priv参数进行设定：secure_file_priv =
+windows中修改my.ini文件，添加一行：secure_file_priv =
+重启mysql服务
 
