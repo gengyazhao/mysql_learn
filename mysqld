@@ -25,4 +25,4 @@ default-character-set=utf8
 port=3307
 default-character-set=utf8
 bind-address=0.0.0.0
-secure_file_priv =
+secure_file_priv =''
