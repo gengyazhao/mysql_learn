@@ -1,6 +1,8 @@
 #mysql.ini
 
 [mysqld]
+#要设置在[mysqld]后面，否则不生效
+secure_file_priv =''
 # 设置3307端口
 port=3307
 # 设置mysql的安装目录
@@ -25,4 +27,4 @@ default-character-set=utf8
 port=3307
 default-character-set=utf8
 bind-address=0.0.0.0
-secure_file_priv =''
+
