@@ -1,0 +1,26 @@
+mysqldump --help  可查看帮助文档
+
+单个数据库备份
+C:\WINDOWS\system32>
+mysqldump -uroot -pXXXX database_name >d:/bkp/db_name.sql
+或
+mysqldump -uroot -p database_name >d:/bkp/db_name.sql
+Enter password: ****
+
+多个数据库备份
+C:\WINDOWS\system32>
+mysqldump -uroot -pxxxx --databases db_name1 db_name2 >bkp.sql
+或
+mysqldump -uroot -p --databases db_name1 db_name2 >bkp.sql
+Enter password: ****
+备份多个数据库使用--databases
+若不指定目录，则备份文件在cmd命令行目录下，此处为C:\WINDOWS\system32目录下
+
+备份所有数据库
+C:\WINDOWS\system32>
+mysqldump -uroot -pxxxx --all-databases >bkp.sql
+或
+mysqldump -uroot -p --all-databases >bkp.sql
+Enter password: ****
+
+
