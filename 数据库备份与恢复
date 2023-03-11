@@ -42,7 +42,16 @@ mysql> show global variables like '%secure%';
 | secure_file_priv         | NULL  |
 +--------------------------+-------+
 
-linux中修改mysql.cnf文件，对secure_file_priv参数进行设定：secure_file_priv =
-windows中修改my.ini文件，添加一行：secure_file_priv =
+linux中修改mysql.cnf文件，对secure_file_priv参数进行设定：secure_file_priv =''
+windows中修改my.ini文件，添加一行：secure_file_priv =''
 重启mysql服务
+C:\WINDOWS\system32>net stop mysql
+MySQL 服务正在停止.
+MySQL 服务已成功停止。
+
+
+C:\WINDOWS\system32>net start mysql
+MySQL 服务正在启动 .
+MySQL 服务已经启动成功。
+
 
