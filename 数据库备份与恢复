@@ -59,3 +59,16 @@ MySQL 服务已经启动成功。
 C:\WINDOWS\system32>mysqldump -uroot -p --tab=d:/bkp/ db_name tb_name
 Enter password: ****
 d:/bkp目录下会导出tb_name.sql和tb_name.txt两个文件。
+
+
+
+
+恢复数据库
+create database db_name;
+use db_name;
+source d:/bkp/bk.sql
+或者不登录创建数据库，使用参数-e
+mysql -uroot -p -e "create database db_name"
+mysql -uroot -p db_name < bk.sql
+
+
