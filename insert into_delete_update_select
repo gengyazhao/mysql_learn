@@ -38,6 +38,9 @@ MySQL中where子句的字符串比较是不区分大小写的。 可以使用bin
 select * from table_name where binary column_name = "com";
 select * from table_name where binary column_name = "COM";
 
+查询name重复的记录
+select tbl_name.name,count(*) as count from tbl_name group by test.tbl_name.name having count >1;
+
 
 where：数据库中常用的是where关键字，用于在初始表中筛选查询。它是一个约束声明，用于约束数据，在返回结果集之前起作用。
 group by:对select查询出来的结果集按照某个字段或者表达式进行分组，获得一组组的集合，然后从每组中取出一个指定字段或者表达式的值。
